@@ -1,0 +1,107 @@
+#source "test.txt"
+
+	' * IntType a (offset 0)
+	call	main
+halt
+#line 3
+
+main:
+	enter	6
+	' * Parameters
+	' * Local variables
+	' * IntType b (offset -2)
+	' * IntType c (offset -4)
+	' * IntType d (offset -6)
+#line 7
+	' * Assignment [Variable [a] = IntLit [1]]
+	pusha 0
+	pushi 1
+	storei
+	' * End of Assignment
+#line 8
+	' * Assignment [Variable [b] = IntLit [2]]
+	push bp
+	pushi -2
+	addi
+	pushi 2
+	storei
+	' * End of Assignment
+#line 9
+	' * Assignment [Variable [c] = IntLit [3]]
+	push bp
+	pushi -4
+	addi
+	pushi 3
+	storei
+	' * End of Assignment
+#line 10
+	' * Assignment [Variable [d] = IntLit [1]]
+	push bp
+	pushi -6
+	addi
+	pushi 1
+	storei
+	' * End of Assignment
+#line 11
+	' * Start Switch statement
+	pusha 0
+	loadi
+	push bp
+	pushi -2
+	addi
+	loadi
+	subi
+	jz label0
+	pusha 0
+	loadi
+	push bp
+	pushi -4
+	addi
+	loadi
+	subi
+	jz label1
+	pusha 0
+	loadi
+	push bp
+	pushi -6
+	addi
+	loadi
+	subi
+	jz label2
+label0:
+	' * Start of Write
+	push bp
+	pushi -2
+	addi
+	loadi
+	outi
+	pushb 10
+	outb
+	' * End of Write
+	jmp label3
+label1:
+	' * Start of Write
+	push bp
+	pushi -4
+	addi
+	loadi
+	outi
+	pushb 10
+	outb
+	' * End of Write
+	jmp label3
+label2:
+	' * Start of Write
+	push bp
+	pushi -6
+	addi
+	loadi
+	outi
+	pushb 10
+	outb
+	' * End of Write
+	jmp label3
+label3:
+	ret 0, 6, 0
+	' * End of FunctionDefinition: main
+' * END of program

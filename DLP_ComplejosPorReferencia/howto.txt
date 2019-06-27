@@ -1,0 +1,33 @@
+
+** AST Var Declaration **
+	
+	Añadimos isParam para saber si se trata de un parametro.Pensado para Structs y Arrays
+	
+** Gramatica **
+	
+	Al crear los arguments les añadimos isParam=true
+	
+
+** ValueCGVisitor **
+	
+	Invocation: Si los parámetros son complejos, cargamos las direcciones de memoria de estos en vez de los valores.
+	Hay que tener en cuenta que al ser parametros han de cargarse en el orden inverso.
+	
+		
+** AddressCGVisitor **
+	
+	//Diferenciar por referencia y variable locales (isParam).
+	Variable: En caso de visitar un tipo complejo por parametro y pasado por parámetro, carga la direccion de memoria.
+	
+	
+** ExecuteCGVisitor **
+
+	Al calcular el tamaño de los parametros si estos son tipos complejos se suma solo 2.
+	De esta manera no se hace numberOfBytes.
+	
+** OffsetVisitor **
+	
+	Al calcular el offset de los parametros, si estos son complejos al utilizar referencia solo sumamos 2.
+
+
+

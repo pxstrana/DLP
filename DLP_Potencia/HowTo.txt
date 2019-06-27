@@ -1,0 +1,37 @@
+** Gramática **
+
+	Se añadió como una nueva expresión que se evalua con "<assoc=right>".
+	
+** AST ** 
+	
+	Se creó una nueva clase "Power" implementando Expression y que a su vez
+	tiene como atributos otras dos expresiones, la base y el exponente.
+	
+** AbstractVisitor **
+
+	Se visitan todas las expresiones internas.
+	
+** AbstractCGVisitor **
+
+	Se lanza la excepción adecuada.
+	
+** Interfaz tipo + TypeCheckingVisitor **
+
+	Se añadió un método boolean "isPowereable" que de momento solo se pone a "true"
+	para los tipos int. Se emplea en el type checking, tanto base como exponente han de
+	ser int (de momento). Y se da el tipo de la base si no hay ningún error.
+	
+** ValueCG visitor **
+
+	Se usa un bucle for de MAPL: inicializado al valor de la derecha menos uno (son 
+	el número de veces que se multiplicará por si misma la base partiendo de que ya
+	está inicializado el registro que contiene su valor). El offset del iterador se 
+	almacena en la posición "BP-2". El bucle es inverso, la condición es que el iterador
+	sea mayor que cero y se va decrementando.
+	
+	En el cuerpo, tan solo se obtiene una y otra vez el valor de la base y se va 
+	multiplicando sobre el mismo registro.
+
+** CG **
+	
+	Añadir a enter y ret (locales)  +2 para reservar siempre espacio en la memoria para un contador.

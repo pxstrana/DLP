@@ -1,0 +1,12 @@
+int f(int r, char j) {
+    write j, '\n';
+    return r*2;
+}
+
+int useFunc(Func<int,int,char> p, int a, char l) {
+    return p(a, l);
+}
+
+void main() {
+    write useFunc(f, 2, 'k');
+}

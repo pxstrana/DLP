@@ -1,0 +1,746 @@
+#source "outputDLP.txt"
+
+	call	main
+halt
+#line 1
+
+main:
+	enter	62
+	' * Parameters
+	' * Local variables
+	' * ArrayType hello (offset -5)
+	' * ArrayType world (offset -10)
+	' * ArrayType hw (offset -22)
+	' * ArrayType intVector1 (offset -42)
+	' * ArrayType intVector2 (offset -62)
+#line 7
+	' * Assignment [ArrayAccess [Variable [hello][IntLit [0]]] = CharLit [h]]
+	push bp
+	pushi -5
+	addi
+	pushi 0
+	pushi 1
+	muli
+	addi
+	pushb 104
+	storeb
+	' * End of Assignment
+#line 8
+	' * Assignment [ArrayAccess [Variable [hello][IntLit [1]]] = CharLit [e]]
+	push bp
+	pushi -5
+	addi
+	pushi 1
+	pushi 1
+	muli
+	addi
+	pushb 101
+	storeb
+	' * End of Assignment
+#line 9
+	' * Assignment [ArrayAccess [Variable [hello][IntLit [2]]] = CharLit [l]]
+	push bp
+	pushi -5
+	addi
+	pushi 2
+	pushi 1
+	muli
+	addi
+	pushb 108
+	storeb
+	' * End of Assignment
+#line 10
+	' * Assignment [ArrayAccess [Variable [hello][IntLit [3]]] = CharLit [l]]
+	push bp
+	pushi -5
+	addi
+	pushi 3
+	pushi 1
+	muli
+	addi
+	pushb 108
+	storeb
+	' * End of Assignment
+#line 11
+	' * Assignment [ArrayAccess [Variable [hello][IntLit [4]]] = CharLit [o]]
+	push bp
+	pushi -5
+	addi
+	pushi 4
+	pushi 1
+	muli
+	addi
+	pushb 111
+	storeb
+	' * End of Assignment
+#line 13
+	' * Assignment [ArrayAccess [Variable [world][IntLit [0]]] = CharLit [w]]
+	push bp
+	pushi -10
+	addi
+	pushi 0
+	pushi 1
+	muli
+	addi
+	pushb 119
+	storeb
+	' * End of Assignment
+#line 14
+	' * Assignment [ArrayAccess [Variable [world][IntLit [1]]] = CharLit [o]]
+	push bp
+	pushi -10
+	addi
+	pushi 1
+	pushi 1
+	muli
+	addi
+	pushb 111
+	storeb
+	' * End of Assignment
+#line 15
+	' * Assignment [ArrayAccess [Variable [world][IntLit [2]]] = CharLit [r]]
+	push bp
+	pushi -10
+	addi
+	pushi 2
+	pushi 1
+	muli
+	addi
+	pushb 114
+	storeb
+	' * End of Assignment
+#line 16
+	' * Assignment [ArrayAccess [Variable [world][IntLit [3]]] = CharLit [l]]
+	push bp
+	pushi -10
+	addi
+	pushi 3
+	pushi 1
+	muli
+	addi
+	pushb 108
+	storeb
+	' * End of Assignment
+#line 17
+	' * Assignment [ArrayAccess [Variable [world][IntLit [4]]] = CharLit [d]]
+	push bp
+	pushi -10
+	addi
+	pushi 4
+	pushi 1
+	muli
+	addi
+	pushb 100
+	storeb
+	' * End of Assignment
+#line 19
+	' * Assignment [ArrayAccess [Variable [hw][IntLit [0]]] = CharLit [H]]
+	push bp
+	pushi -22
+	addi
+	pushi 0
+	pushi 1
+	muli
+	addi
+	pushb 72
+	storeb
+	' * End of Assignment
+#line 20
+	' * Assignment [ArrayAccess [Variable [hw][IntLit [1]]] = CharLit [e]]
+	push bp
+	pushi -22
+	addi
+	pushi 1
+	pushi 1
+	muli
+	addi
+	pushb 101
+	storeb
+	' * End of Assignment
+#line 21
+	' * Assignment [ArrayAccess [Variable [hw][IntLit [2]]] = CharLit [l]]
+	push bp
+	pushi -22
+	addi
+	pushi 2
+	pushi 1
+	muli
+	addi
+	pushb 108
+	storeb
+	' * End of Assignment
+#line 22
+	' * Assignment [ArrayAccess [Variable [hw][IntLit [3]]] = CharLit [l]]
+	push bp
+	pushi -22
+	addi
+	pushi 3
+	pushi 1
+	muli
+	addi
+	pushb 108
+	storeb
+	' * End of Assignment
+#line 23
+	' * Assignment [ArrayAccess [Variable [hw][IntLit [4]]] = CharLit [o]]
+	push bp
+	pushi -22
+	addi
+	pushi 4
+	pushi 1
+	muli
+	addi
+	pushb 111
+	storeb
+	' * End of Assignment
+#line 24
+	' * Assignment [ArrayAccess [Variable [hw][IntLit [5]]] = CharLit [ ]]
+	push bp
+	pushi -22
+	addi
+	pushi 5
+	pushi 1
+	muli
+	addi
+	pushb 32
+	storeb
+	' * End of Assignment
+#line 25
+	' * Assignment [ArrayAccess [Variable [hw][IntLit [6]]] = CharLit [w]]
+	push bp
+	pushi -22
+	addi
+	pushi 6
+	pushi 1
+	muli
+	addi
+	pushb 119
+	storeb
+	' * End of Assignment
+#line 26
+	' * Assignment [ArrayAccess [Variable [hw][IntLit [7]]] = CharLit [o]]
+	push bp
+	pushi -22
+	addi
+	pushi 7
+	pushi 1
+	muli
+	addi
+	pushb 111
+	storeb
+	' * End of Assignment
+#line 27
+	' * Assignment [ArrayAccess [Variable [hw][IntLit [8]]] = CharLit [r]]
+	push bp
+	pushi -22
+	addi
+	pushi 8
+	pushi 1
+	muli
+	addi
+	pushb 114
+	storeb
+	' * End of Assignment
+#line 28
+	' * Assignment [ArrayAccess [Variable [hw][IntLit [9]]] = CharLit [l]]
+	push bp
+	pushi -22
+	addi
+	pushi 9
+	pushi 1
+	muli
+	addi
+	pushb 108
+	storeb
+	' * End of Assignment
+#line 29
+	' * Assignment [ArrayAccess [Variable [hw][IntLit [10]]] = CharLit [d]]
+	push bp
+	pushi -22
+	addi
+	pushi 10
+	pushi 1
+	muli
+	addi
+	pushb 100
+	storeb
+	' * End of Assignment
+#line 30
+	' * Assignment [ArrayAccess [Variable [hw][IntLit [11]]] = CharLit [!]]
+	push bp
+	pushi -22
+	addi
+	pushi 11
+	pushi 1
+	muli
+	addi
+	pushb 33
+	storeb
+	' * End of Assignment
+#line 33
+	' * Start of write
+	push bp
+	pushi -5
+	addi
+	pushi 0
+	pushi 1
+	muli
+	addi
+	loadb
+	outb
+	push bp
+	pushi -5
+	addi
+	pushi 1
+	pushi 1
+	muli
+	addi
+	loadb
+	outb
+	push bp
+	pushi -5
+	addi
+	pushi 2
+	pushi 1
+	muli
+	addi
+	loadb
+	outb
+	push bp
+	pushi -5
+	addi
+	pushi 3
+	pushi 1
+	muli
+	addi
+	loadb
+	outb
+	push bp
+	pushi -5
+	addi
+	pushi 4
+	pushi 1
+	muli
+	addi
+	loadb
+	outb
+#line 34
+	' * Start of write
+	push bp
+	pushi -10
+	addi
+	pushi 0
+	pushi 1
+	muli
+	addi
+	loadb
+	outb
+	push bp
+	pushi -10
+	addi
+	pushi 1
+	pushi 1
+	muli
+	addi
+	loadb
+	outb
+	push bp
+	pushi -10
+	addi
+	pushi 2
+	pushi 1
+	muli
+	addi
+	loadb
+	outb
+	push bp
+	pushi -10
+	addi
+	pushi 3
+	pushi 1
+	muli
+	addi
+	loadb
+	outb
+	push bp
+	pushi -10
+	addi
+	pushi 4
+	pushi 1
+	muli
+	addi
+	loadb
+	outb
+#line 35
+	' * Start of write
+	push bp
+	pushi -22
+	addi
+	pushi 0
+	pushi 1
+	muli
+	addi
+	loadb
+	outb
+	push bp
+	pushi -22
+	addi
+	pushi 1
+	pushi 1
+	muli
+	addi
+	loadb
+	outb
+	push bp
+	pushi -22
+	addi
+	pushi 2
+	pushi 1
+	muli
+	addi
+	loadb
+	outb
+	push bp
+	pushi -22
+	addi
+	pushi 3
+	pushi 1
+	muli
+	addi
+	loadb
+	outb
+	push bp
+	pushi -22
+	addi
+	pushi 4
+	pushi 1
+	muli
+	addi
+	loadb
+	outb
+	push bp
+	pushi -22
+	addi
+	pushi 5
+	pushi 1
+	muli
+	addi
+	loadb
+	outb
+	push bp
+	pushi -22
+	addi
+	pushi 6
+	pushi 1
+	muli
+	addi
+	loadb
+	outb
+	push bp
+	pushi -22
+	addi
+	pushi 7
+	pushi 1
+	muli
+	addi
+	loadb
+	outb
+	push bp
+	pushi -22
+	addi
+	pushi 8
+	pushi 1
+	muli
+	addi
+	loadb
+	outb
+	push bp
+	pushi -22
+	addi
+	pushi 9
+	pushi 1
+	muli
+	addi
+	loadb
+	outb
+	push bp
+	pushi -22
+	addi
+	pushi 10
+	pushi 1
+	muli
+	addi
+	loadb
+	outb
+	push bp
+	pushi -22
+	addi
+	pushi 11
+	pushi 1
+	muli
+	addi
+	loadb
+	outb
+#line 37
+	' * Assignment [Variable [hello] = Variable [world]]
+	push bp
+	pushi -5
+	addi
+	pushi 0
+	pushi 1
+	muli
+	addi
+	push bp
+	pushi -5
+	addi
+	pushi 0
+	pushi 1
+	muli
+	addi
+	loadb
+	storeb
+	push bp
+	pushi -5
+	addi
+	pushi 1
+	pushi 1
+	muli
+	addi
+	push bp
+	pushi -5
+	addi
+	pushi 1
+	pushi 1
+	muli
+	addi
+	loadb
+	storeb
+	push bp
+	pushi -5
+	addi
+	pushi 2
+	pushi 1
+	muli
+	addi
+	push bp
+	pushi -5
+	addi
+	pushi 2
+	pushi 1
+	muli
+	addi
+	loadb
+	storeb
+	push bp
+	pushi -5
+	addi
+	pushi 3
+	pushi 1
+	muli
+	addi
+	push bp
+	pushi -5
+	addi
+	pushi 3
+	pushi 1
+	muli
+	addi
+	loadb
+	storeb
+	push bp
+	pushi -5
+	addi
+	pushi 4
+	pushi 1
+	muli
+	addi
+	push bp
+	pushi -5
+	addi
+	pushi 4
+	pushi 1
+	muli
+	addi
+	loadb
+	storeb
+	' * End of Assignment
+#line 38
+	' * Start of write
+	push bp
+	pushi -5
+	addi
+	pushi 0
+	pushi 1
+	muli
+	addi
+	loadb
+	outb
+	push bp
+	pushi -5
+	addi
+	pushi 1
+	pushi 1
+	muli
+	addi
+	loadb
+	outb
+	push bp
+	pushi -5
+	addi
+	pushi 2
+	pushi 1
+	muli
+	addi
+	loadb
+	outb
+	push bp
+	pushi -5
+	addi
+	pushi 3
+	pushi 1
+	muli
+	addi
+	loadb
+	outb
+	push bp
+	pushi -5
+	addi
+	pushi 4
+	pushi 1
+	muli
+	addi
+	loadb
+	outb
+#line 40
+	' * Assignment [Variable [world] = Variable [hw]]
+	push bp
+	pushi -10
+	addi
+	pushi 0
+	pushi 1
+	muli
+	addi
+	push bp
+	pushi -10
+	addi
+	pushi 0
+	pushi 1
+	muli
+	addi
+	loadb
+	storeb
+	push bp
+	pushi -10
+	addi
+	pushi 1
+	pushi 1
+	muli
+	addi
+	push bp
+	pushi -10
+	addi
+	pushi 1
+	pushi 1
+	muli
+	addi
+	loadb
+	storeb
+	push bp
+	pushi -10
+	addi
+	pushi 2
+	pushi 1
+	muli
+	addi
+	push bp
+	pushi -10
+	addi
+	pushi 2
+	pushi 1
+	muli
+	addi
+	loadb
+	storeb
+	push bp
+	pushi -10
+	addi
+	pushi 3
+	pushi 1
+	muli
+	addi
+	push bp
+	pushi -10
+	addi
+	pushi 3
+	pushi 1
+	muli
+	addi
+	loadb
+	storeb
+	push bp
+	pushi -10
+	addi
+	pushi 4
+	pushi 1
+	muli
+	addi
+	push bp
+	pushi -10
+	addi
+	pushi 4
+	pushi 1
+	muli
+	addi
+	loadb
+	storeb
+	' * End of Assignment
+#line 41
+	' * Start of write
+	push bp
+	pushi -10
+	addi
+	pushi 0
+	pushi 1
+	muli
+	addi
+	loadb
+	outb
+	push bp
+	pushi -10
+	addi
+	pushi 1
+	pushi 1
+	muli
+	addi
+	loadb
+	outb
+	push bp
+	pushi -10
+	addi
+	pushi 2
+	pushi 1
+	muli
+	addi
+	loadb
+	outb
+	push bp
+	pushi -10
+	addi
+	pushi 3
+	pushi 1
+	muli
+	addi
+	loadb
+	outb
+	push bp
+	pushi -10
+	addi
+	pushi 4
+	pushi 1
+	muli
+	addi
+	loadb
+	outb
+	ret 0, 62, 0
+	' * End of FunctionDefinition: main
+' * END of program

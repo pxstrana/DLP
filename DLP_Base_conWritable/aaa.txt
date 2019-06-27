@@ -1,0 +1,19 @@
+
+struct { 
+  int campo;
+} pair;
+
+void f( struct{int campo;} a){
+
+	a.campo=2;
+
+}
+
+void main() {
+    f(pair);
+}
+
+
+
+
+

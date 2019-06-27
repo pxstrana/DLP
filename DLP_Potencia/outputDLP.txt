@@ -1,0 +1,81 @@
+#source "aaa.txt"
+
+	' * IntType a (offset 0)
+	call	main
+halt
+#line 3
+
+main:
+	enter	02
+	' * Parameters
+	' * Local variables
+#line 4
+	' * Start of Write
+	' * ' * BEGIN: Power
+	push bp
+	pushi -2
+	addi
+	' * ' * BEGIN: Power
+	push bp
+	pushi -2
+	addi
+	pushi 2
+	pushi 1
+	subi
+	storei
+	pushi 3
+label2:
+	push bp
+	pushi -2
+	addi
+	loadi
+	pushi 0
+	subi
+	jz label3
+	pushi 3
+	muli
+	push bp
+	pushi -2
+	addi
+	push bp
+	pushi -2
+	addi
+	loadi
+	pushi 1
+	subi
+	storei
+	jmp label2
+label3:
+	' * ' * END: Power
+	pushi 1
+	subi
+	storei
+	pushi 2
+label0:
+	push bp
+	pushi -2
+	addi
+	loadi
+	pushi 0
+	subi
+	jz label1
+	pushi 2
+	muli
+	push bp
+	pushi -2
+	addi
+	push bp
+	pushi -2
+	addi
+	loadi
+	pushi 1
+	subi
+	storei
+	jmp label0
+label1:
+	' * ' * END: Power
+	outi
+	' * End of Write
+	ret 0, 02, 0
+	' * End of FunctionDefinition: main
+' * END of program

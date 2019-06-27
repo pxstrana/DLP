@@ -1,0 +1,20 @@
+
+struct { 
+  int campo;
+} pair;
+
+void f( struct{ int campo;} a){
+
+	write a.campo;
+
+}
+
+void main() {
+	pair.campo=4;
+    f(pair);
+}
+
+
+
+
+

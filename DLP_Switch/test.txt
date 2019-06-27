@@ -1,0 +1,22 @@
+int a;
+
+void main() {
+	int b;
+	int c;
+	int d;
+	a = 1;
+	b = 2;
+	c = 3;
+	d = 1;
+	switch(a) {
+		case b: 
+			write b, '\n';
+			break;
+		case c: 
+			write c, '\n';
+			break;
+		case d: 
+			write d, '\n';
+			break;
+	}
+}

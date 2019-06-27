@@ -1,0 +1,7 @@
+int a;
+
+void main() {
+    write 2 ** 3 ** 2 ;
+}
+
+

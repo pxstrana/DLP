@@ -1,0 +1,16 @@
+** IdentificationVisitor **
+
+	Para el while y el ifElse, hacer un "set", visitar el statement (para que se 
+	visite todo lo interno), y finalmente, hacer un "reset" de la scope.
+	
+** Gramática **
+
+	Se añadió la posibilidad de declarar variables en los "blocks" que usan en 
+	los whiles e ifs.
+	
+** ExecuteCGVisitor **
+
+	Se modificó el método auxiliar "getLocalVarSize" para que en el caso de que 
+	se encuentre un if o un while, se evalúe recursivamente. De esa forma se hará
+	"enter" con todas las definiciones de variable independientemente de la scope
+	en la que estén, de las misma forma, se hará el "ret".

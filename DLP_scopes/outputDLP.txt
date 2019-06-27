@@ -1,0 +1,95 @@
+#source "aaa.txt"
+
+	' * IntType a (offset 0)
+	' * IntType b (offset 2)
+	call	main
+halt
+#line 4
+
+f:
+	enter	2
+	' * Parameters
+	' * IntType x ( offset 6)
+	' * IntType y ( offset 4)
+	' * Local variables
+#line 5
+	' * Assignment [Variable [x] = IntLit [3]]
+	push bp
+	pushi 6
+	addi
+	pushi 3
+	storei
+	' * End of Assignment
+#line 6
+	' * Start of Write
+	push bp
+	pushi 6
+	addi
+	loadi
+	outi
+	pushb 10
+	outb
+	' * End of Write
+#line 7
+	' * If [(BinaryExp [Variable [x] == IntLit [3]])]
+	push bp
+	pushi 6
+	addi
+	loadi
+	pushi 3
+	eqi
+	jz label0
+	' * If Body
+	' * IntType z (offset -2)
+#line 9
+	' * Assignment [Variable [z] = IntLit [4]]
+	push bp
+	pushi -2
+	addi
+	pushi 4
+	storei
+	' * End of Assignment
+#line 10
+	' * Start of Write
+	push bp
+	pushi -2
+	addi
+	loadi
+	outi
+	' * End of Write
+	jmp label1
+label0:
+	' * Else Body
+label1:
+	' * End of If
+	ret 0, 2, 4
+	' * End of FunctionDefinition: f
+#line 14
+
+main:
+	enter	0
+	' * Parameters
+	' * Local variables
+#line 15
+	' * Assignment [Variable [a] = IntLit [1]]
+	pusha 0
+	pushi 1
+	storei
+	' * End of Assignment
+#line 16
+	' * Assignment [Variable [b] = IntLit [2]]
+	pusha 2
+	pushi 2
+	storei
+	' * End of Assignment
+#line 17
+	' * Invocation [f ([Variable [a], Variable [b]])]
+	pusha 0
+	loadi
+	pusha 2
+	loadi
+	call	f
+	' * End of invocation: f
+	ret 0, 0, 0
+	' * End of FunctionDefinition: main
+' * END of program

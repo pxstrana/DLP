@@ -1,0 +1,14 @@
+
+
+
+void main() {
+    int i;
+    double d;
+    i=d;
+    i=(int) d;
+}
+
+
+
+
+

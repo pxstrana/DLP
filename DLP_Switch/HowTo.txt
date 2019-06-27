@@ -1,0 +1,31 @@
+** Gramática **
+
+	Se introdujo una nueva regla para reconocerlo como Statement.
+	
+** AST **
+
+	Se crearon las clases "Case" (contenedor de Statements con una condición) y 
+	"Switch" (contenedor de Cases con una condición). Las condiciones son expresiones.
+	
+** AbstractVisitor **
+
+	Se visitan todas las expresiones internas.
+	
+** AbstractCGVisitor **
+
+	Se lanza la excepción adecuada.
+	
+** TypeCheckingVisitor **
+
+	Se comprueba que todas las condiciones sean lógicas.
+	
+** ExecuteCGVisitor **
+	
+	Primero de todo, se obtienen las labels: una para cada caso más una extra para 
+	salir. Se crean todos los casos: condición del switch, condición del caso, resta 
+	y si son iguales (true), se salta al caso.
+	
+	A continuación, en otro bucle, se incluyen todos los Statements a ejecutar para
+	cada caso y un salto directo para salir del switch.
+	
+	Al final del todo se pone la label que marca el final o salida del switch.

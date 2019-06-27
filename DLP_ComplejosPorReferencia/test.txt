@@ -1,0 +1,43 @@
+
+struct { 
+  int campo;
+  double doble;
+} pair;
+
+void f( struct{int campo; double doble;} stru1, char[3] arry){
+
+	stru1.campo=666;
+	stru1.doble=666.0;
+
+	arry[0]='x';
+	arry[1]= 'y';
+}
+
+void main() {
+	
+	char[3] a;
+	a[0] = 'A';
+	a[1] = 'R';
+	
+	
+	pair.campo=222;
+	pair.doble=222.0;
+	write pair.campo , '\n';
+	write pair.doble , '\n';
+	
+    f(pair,a);
+    
+    write pair.campo , '\n';
+    write pair.doble , '\n';
+    
+    
+    write a[0] , '\n';
+    write a[1] , '\n';
+       
+    
+}
+
+
+
+
+

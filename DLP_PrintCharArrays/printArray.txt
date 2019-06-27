@@ -1,0 +1,47 @@
+void main() {
+    char[5] hello, world;
+    char[12] hw;
+    int[10] intVector1, intVector2;
+
+
+    hello[0] = 'h';
+    hello[1] = 'e';
+    hello[2] = 'l';
+    hello[3] = 'l';
+    hello[4] = 'o';
+
+    world[0] = 'w';
+    world[1] = 'o';
+    world[2] = 'r';
+    world[3] = 'l';
+    world[4] = 'd';
+
+    hw[0] = 'H';
+    hw[1] = 'e';
+    hw[2] = 'l';
+    hw[3] = 'l';
+    hw[4] = 'o';
+    hw[5] = ' ';
+    hw[6] = 'w';
+    hw[7] = 'o';
+    hw[8] = 'r';
+    hw[9] = 'l';
+    hw[10] = 'd';
+    hw[11] = '!';
+
+
+    write hello, '\n';
+    write world, '\n';
+    write hw, '\n';
+
+    hello = world;
+    write hello, '\n';
+
+    world = hw;
+    write world, '\n';
+
+    //hw = hello;
+    //intVector1 = intVector2;
+
+
+}

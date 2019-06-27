@@ -1,0 +1,4 @@
+Syntax-> nuevo tipo Func<type> (Dar nombres preDef a las VarDeclaration de los parametros para que pase el IdentificationVisitor )
+Semantic-> si esta todo correct, cambia el nombre de la def
+ValueVisitor-> en invocation, en vez de nombre de variable, de la Definition
+ValueVisitor-> si es un FuncType de parametro, que no se invoque

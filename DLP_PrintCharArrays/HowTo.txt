@@ -1,0 +1,39 @@
+** Interfaz Type **
+
+	Métodos boolean isEquivalent(Type t) y isAssignable(Type t).
+	
+** AbstractType **
+
+	Return "false" para ambos.
+	
+** Tipos concretos **
+
+	Para isEquivalent: en los builtIn types "instanceof" simple, en StructType, 
+	comparar el número de records y los tipos de cada record y en ArrayType, 
+	comparar recursivamente el tipo interno.
+	Para isAssignable: uso del método anterior y si fuere necesario, añadir más 
+	condiciones.
+	
+** TypeCheckingVisitor **
+
+	En Assignment uso de isAssignable.
+
+** ExecuteCGVisitor **
+
+	En Assignment, si ambas partes son ArrayType, se usa un bucle
+	for de MAPL que utiliza un iterador almacenado encima de las variables
+	locales (+2 al número total de bytes de las VariableDeclarations). Se
+	inicializa a cero, la condición es que no sea mayor que la longitud de la
+	array de la izquierda. El incremento es normal: carga de la dirección de "i",
+	carga de su valor, sumar uno, almacenar en la dirección previamente obtenida.
+	
+	En el cuerpo del bucle, se extrae la dirección de la posición a la que 
+	estamos accediendo, tal y cómo haríamos con un ArrayAccess (pero sin
+	cargar el valor) y a continuación se hace un ArrayAccess en la derecha para
+	obtener el valor a asignar. Finalmente hacemos un store.
+	
+** CG **
+
+	En el "enter", añadir un "+2" para que siempre se deje espacio para el iterador.
+	Así como en el "ret", añadir un "+2" en la parte de las variables locales para
+	liberal el espacio del iterador.

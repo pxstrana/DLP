@@ -1,0 +1,33 @@
+
+struct{ 
+	int num;
+	char character;
+} pair;
+
+void f(
+
+	struct{ 
+	int num;
+	char character;
+	}  pair
+
+){
+
+   write pair.num;
+   write pair.num + 2;
+   write pair.character;
+}
+
+void main() {
+   pair.num=5;
+   pair.character='D';
+    
+    f(pair);
+    
+   write pair.num;
+   write pair.character;
+}
+
+
+
+

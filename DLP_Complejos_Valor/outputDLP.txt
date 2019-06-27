@@ -1,0 +1,99 @@
+#source "structTest.txt"
+
+	' * StructType pair (offset 0)
+	call	main
+halt
+#line 7
+
+f:
+	enter	0
+	' * Parameters
+	' * StructType pair ( offset 4)
+	' * Local variables
+#line 16
+	' * Start of Write
+	push bp
+	pushi 4
+	addi
+	pushi 0
+	addi
+	loadi
+	outi
+	' * End of Write
+#line 17
+	' * Start of Write
+	push bp
+	pushi 4
+	addi
+	pushi 0
+	addi
+	loadi
+	pushi 2
+	addi
+	outi
+	' * End of Write
+#line 18
+	' * Start of Write
+	push bp
+	pushi 4
+	addi
+	pushi 2
+	addi
+	loadb
+	outb
+	' * End of Write
+	ret 0, 0, 3
+	' * End of FunctionDefinition: f
+#line 21
+
+main:
+	enter	0
+	' * Parameters
+	' * Local variables
+#line 22
+	' * Assignment [FieldAccess [Variable [pair].num] = IntLit [5]]
+	pusha 0
+	pushi 0
+	addi
+	pushi 5
+	storei
+	' * End of Assignment
+#line 23
+	' * Assignment [FieldAccess [Variable [pair].character] = CharLit [D]]
+	pusha 0
+	pushi 2
+	addi
+	pushb 68
+	storeb
+	' * End of Assignment
+#line 25
+	' * Invocation [f ([Variable [pair]])]
+	pusha 0
+	pushi 2
+	addi
+	loadb
+	pusha 0
+	pushi 0
+	addi
+	loadi
+	call	f
+	' * End of invocation: f
+#line 27
+	' * Start of Write
+	pusha 0
+	pushi 0
+	addi
+	loadi
+	outi
+	' * End of Write
+#line 28
+	' * Start of Write
+	pusha 0
+	pushi 2
+	addi
+	loadb
+	outb
+	' * End of Write
+	ret 0, 0, 0
+	' * End of FunctionDefinition: main
+' * END of program

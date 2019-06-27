@@ -1,0 +1,8 @@
+** ValueCGVisitor **
+    
+    Invocation: Si los parámetros son complejos, cargamos los valores. 
+	Hay que tener en cuenta que al ser parametros han de cargarse en el orden inverso.
+	
+** OffsetVisitor ** 
+
+	FunctionType: si el parametro es un struct, que se acepte para calcular los offsets.

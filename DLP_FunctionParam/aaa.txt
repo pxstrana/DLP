@@ -1,0 +1,11 @@
+int duplicate(int r) {
+    return r*2;
+}
+
+int useFunc(Func<int,int> f, int a) {
+    return f(a);
+}
+
+void main() {
+    write useFunc(duplicate,2);
+}
